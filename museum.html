@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore the World - Museum Tours in Manila</title>
+    <link rel="stylesheet" href="y.css">
+    <script src="lightbox.jpg" defer></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2e5d9;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #C3B091;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2 {
+            text-align: center;
+            color: #3D2B1F;
+        }
+        .tour, .museums-item {
+            margin-bottom: 20px;
+            padding: 15px;
+            background-color: #F5F5DC;
+            border-left: 5px solid #3D2B1F;
+        }
+        .tour h3, .museums-item h3 {
+            color: #3D2B1F;
+        }
+        .tour p, .museums-item p {
+            font-size: 1.1em;
+            line-height: 1.6;
+        }
+        .duration {
+            font-weight: bold;
+        }
+        header {
+            text-align: center;
+            padding: 20px;
+            background-color: #F5F5DC;
+            color: #3D2B1F;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #3D2B1F;
+            color: #f2e5d9;
+        }
+        nav ul {
+            list-style-type: none;
+            text-align: center;
+            background-color: #3D2B1F;
+            margin: 0;
+            padding: 10px 0;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: #F5F5DC;
+            text-decoration: none;
+        }
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+        .section-tours, .section-contact, .section-about, .section-museums-detail {
+            display: none;
+        }
+        .museums-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    margin: 20px 0;
+    align-items: flex-start;
+}
+
+.museums-item {
+    flex: 1 1 calc(33% - 20px); 
+    max-width: 30%; 
+    background-color: #F5F5DC;
+    border-left: 5px solid #3D2B1F;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 15px;
+}
+
+.museums-item img {
+    width: 100%;
+    height: 200;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.1);
+}
+.museum-image {
+    flex: 1 1 calc(33% - 20px); 
+    max-width: calc(33% - 20px); 
+}
+
+.museums-item h3 {
+    margin-top: 10px;
+    font-size: 1.2em;
+    color: #3D2B1F;
+}
+/* images inside the museum */
+.museum-images {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center; 
+    gap: 20px; 
+}
+
+.museum-image {
+    width: 30%; 
+    text-align: center; 
+}
+
+.museum-image img {
+    width: 100%; 
+    height: auto; 
+}
+.museum-image p {
+    margin-top: 10px; 
+    font-size: 1.1em;
+}
+    </style>
+    <script>
+       function toggleSection(sectionId) {
+    var sections = document.querySelectorAll('.section');
+    sections.forEach(function (section) {
+        section.style.display = 'none'; 
+    });
+
+    var selectedSection = document.getElementById(sectionId);
+    if (selectedSection) {
+        selectedSection.style.display = 'block'; 
+    }
+}
+    </script>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <h1>Manila Museum Collections</h1>
+        <p>Explore. Learn. Be Inspired</p>
+    </header>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <ul>
+            <li><a href="#" onclick="toggleSection('museums')">Museums</a></li>
+            <li><a href="#" onclick="toggleSection('tours')">Tours</a></li>
+            <li><a href="#" onclick="toggleSection('about')">About Us</a></li>
+            <li><a href="#" onclick="toggleSection('contact')">Contact Us</a></li>
+        </ul>
+    </nav>
+    <!-- Main Content -->
+    <main>
+        <!-- Museums Section -->
+        <section id="museums" class="section section-museums">
+            <h2>Museums in Manila, Philippines</h2>
+            <p>Discover the beauty and history of various museums in Manila.</p>
+            
+            <div class="museums-list">
+                <!-- Museum 1 -->
+                <div class="museums-item">
+                    <a href="#" onclick="toggleSection('national-museum-fine-arts-detail')">
+                        <img src="natlmus.jpg" alt="National Museum of Fine Arts">
+                    </a>
+                    <h3>National Museum of Fine Arts</h3>
+                    <p>It houses 29 galleries featuring 19th-century Filipino masters, National Artists, modern painters, sculptors, printmakers, and art loans from other institutions and individuals.</p>
+                </div>
+                
+                <!-- Museum 2 -->
+                <div class="museums-item">
+                    <a href="#" onclick="toggleSection('national-museum-natural-history-detail')">
+                        <img src="ntlhis.jpg" alt="National Museum of Natural History">
+                    </a>
+                    <h3>National Museum of Natural History</h3>
+                    <p>Houses 12 permanent galleries showcasing the Philippines' rich biological and geological diversity, with creatively curated displays of botanical, zoological, and geological specimens.</p>
+                </div>
+                <!-- Museum 3 -->
+                <div class="museums-item">
+                    <a href="#" onclick="toggleSection('national-museum-anthropology-detail')">
+                        <img src="anth.jpg" alt="National Museum of Anthropology">
+                    </a>
+                    <h3>National Museum of Anthropology</h3>
+                    <p>It is a component museum of the National Museum of the Philippines which houses Ethnological and Archaeological exhibitions.</p>
+                </div>
+		<!-- Museum 4 -->
+                <div class="museums-item">
+                    <a href="#" onclick="toggleSection('ayala-museum-detail')">
+                        <img src="ayala.jpg" alt="AYALA MUSEUM">
+                    </a>
+                    <h3>AYALA MUSEUM</h3>
+                    <p>A historical museum complemented by archaeological, ethnographic and fine arts collection from prehistoric period until present day.</p>
+                </div>
+		<!-- Museum 5 -->
+		<div class="museums-item">
+                    <a href="#" onclick="toggleSection('casa-manila-detail')">
+                        <img src="casa.jpg" alt="CASA MANILA">
+                    </a>
+                    <h3>CASA MANILA</h3>
+                    <p>A living museum that features the lifestyle of an affluent Filipino family during the late Spanish colonial period. The façade of Casa Manila was patterned after a house that once stood at Jaboneros Street in the Chinese district of Binondo in the 1850's.</p>
+                </div>
+		<!-- Museum 6 -->
+		<div class="museums-item">
+                    <a href="#" onclick="toggleSection('museo-de-intramuros-detail')">
+                        <img src="museo.jpg" alt="MUSEO DE INTRAMUROS">
+                    </a>
+                    <h3>MUSEO DE INTRAMUROS</h3>
+                    <p>Comprises two important reconstructions: the San Ignacio Church and the Mission House of the Society of Jesus. As the name denotes, the complex now houses the vast ecclesiastical collection of the Intramuros Administration.</p>
+                </div>
+		<!-- Museum 7 -->
+		<div class="museums-item">
+                    <a href="#" onclick="toggleSection('museo-pambata-detail')">
+                        <img src="children.jpg" alt="MUSEO PAMBATA">
+                    </a>
+                    <h3>MUSEO PAMBATA</h3>
+                    <p>Museo Pambata is a children's museum in Manila, Philippines, offering interactive exhibits and activities that promote hands-on learning, creativity, and cultural awareness. Established in 1994, it focuses on education, environmental awareness, and Filipino heritage, providing a fun and inclusive space for children to explore and learn.</p>
+                </div>
+
+
+
+                <!-- Additional Museums -->
+		<div class="museums-item">
+                    <a href="metro_large.jpg" class="lightbox">
+			<a href="#" onclick="toggleSection('metropolitan-museum-detail')">
+                        <img src="metro.jpg" alt="Metropolitan Museum of Manila">
+                    </a>
+                    <h3>Metropolitan Museum of Manila</h3>
+                    <p>The Metropolitan Museum of Manila showcases local and international art, featuring modern and traditional exhibits, and promotes cultural heritage through educational programs.</p>
+                </div>
+
+                 <div class="museums-item">
+                    <a href="#" onclick="toggleSection('manila-clock-tower-museum-detail')">
+                        <img src="clock.jpg" alt="Manila Clock Tower Museum">
+                    </a>
+                    <h3>Manila Clock Tower Museum</h3>
+                    <p>The Manila Clock Tower Museum highlights Manila’s history and culture through interactive exhibits within its iconic clock tower, offering panoramic city views and insights into Filipino heritage.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Museum Details Sections -->
+        <section id="national-museum-fine-arts-detail" class="section section-museums-detail">
+            <h1>National Museum of Fine Arts</h1>
+            <p>The National Museum of Fine Arts, located in the heart of Manila, showcases the Philippines' rich artistic heritage. The museum is housed in a neoclassical building, originally constructed as the Legislative Building in the early 20th century, and has been repurposed to preserve and display some of the country's most important art collections.</p>
+
+            <p>The museum is home to a vast collection of paintings, sculptures, and decorative arts from the Spanish colonial period to contemporary works. Among its most famous pieces is Juan Luna’s "Spoliarium", which stands as a symbol of Filipino resilience and is regarded as one of the most significant historical paintings in the country.</p>
+
+            <p>The National Museum of Fine Arts not only serves as a repository of Filipino artistic achievements but also provides a space for contemporary Filipino artists to exhibit their works. Visitors can explore these historical and modern pieces, all while learning about the country’s cultural evolution through art.</p>
+            <p>Come visit and experience the beauty of Filipino art and culture at the National Museum of Fine Arts!</p>
+            <div class="museum-images">
+                <div class="museum-image">
+                     <img src="spoli.jpg" alt="Spoliarium by Juan Luna">
+                    <p><strong>Spoliarium</strong> by Juan Luna</p>
+                </div>
+                <div class="museum-image">
+                    <img src="rice.jpg" alt="The Planting of Rice by Fernando Amorsolo">
+                    <p><strong>The Planting of Rice</strong> by Fernando Amorsolo</p>
+                </div>
+                <div class="museum-image">
+                    <img src="labarca.jpg" alt="La Barca de Aqueronte by Felix Hidalgo">
+                    <p><strong>La Barca de Aqueronte</strong> by Felix Resurrección Hidalgo</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="national-museum-natural-history-detail" class="section section-museums-detail">
+            <h1>National Museum of Natural History</h1>
+           <p>The National Museum of Natural History, located in the heart of Manila, is one of the Philippines' premier museums, dedicated to showcasing the country's rich natural heritage. The museum is part of the National Museum Complex, which includes other important cultural institutions such as the National Museum of Fine Arts and the National Museum of Anthropology.</p>
+
+            <p>The museum focuses on the diversity of the Philippines' ecosystems, presenting exhibits on biodiversity, geology, paleontology, and environmental conservation. Among its highlights are the "Lolong" crocodile, one of the largest crocodiles ever captured, and the stunning "Tree of Life" sculpture that symbolizes the interconnectedness of life on Earth.</p>
+
+            <p>Come visit and explore the beauty and richness of the Philippines' natural history through its diverse flora and fauna, while learning about ongoing conservation efforts to protect this biodiversity.</p>
+
+            <div class="museum-images">
+                <div class="museum-image">
+                    <img src="fac.jpg" alt="Facade of National Museum of Natural History">
+                    <p><strong>Facade of the National Museum of Natural History</strong></p>
+                </div>
+                <div class="museum-image">
+                    <img src="lolong.jpg" alt="Lolong Crocodile Exhibit">
+                    <p><strong>Lolong Crocodile Exhibit</strong></p>
+                </div>
+                <div class="museum-image">
+                    <img src="tree.jpg" alt="Tree of Life Sculpture">
+                    <p><strong>Tree of Life Sculpture</strong></p>
+                </div>
+            </div>
+
+        </section>
+
+        <section id="national-museum-anthropology-detail" class="section section-museums-detail">
+    <h1>National Museum of Anthropology</h1>
+    <p>The National Museum of Anthropology in Manila, formerly known as the National Museum of the Filipino People, is housed in a stunning neoclassical building designed by architect Ralph Harrington Doane. Constructed between 1916 and 1918, the building originally served as the Department of Finance. It was severely damaged during World War II and rebuilt in 1949. The structure features a trapezoidal plan, grand Corinthian columns, and a distinctive portico, offering breathtaking views of Luneta.</p>
+
+    <p>The museum's collections reflect the rich and diverse cultural heritage of the Philippines. Key exhibits include the Baybayin scripts, showcasing ancient Filipino writing, and the Kaban ng Lahi (Archaeological Treasures) Gallery, which displays burial jars and artifacts that date back 2,500 to 1,000 years. It also features exhibitions on the Lumad peoples of Mindanao, the Hibla ng Lahing Filipino textiles gallery, and a display on the San Diego shipwreck – artifacts from a galleon shipwrecked off the Philippines coast in 1600.</p>
+
+    <div class="museum-images">
+        <div class="museum-image">
+            <img src="baybayin.jpg" alt="Baybayin Exhibit">
+            <p><strong>Baybayin Exhibit</strong></p>
+        </div>
+        <div class="museum-image">
+            <img src="treasure.jpg" alt="Archaeological Treasures">
+            <p><strong>Archaeological Treasures</strong></p>
+        </div>
+        <div class="museum-image">
+            <img src="sandiego.jpg" alt="San Diego Shipwreck Exhibit">
+            <p><strong>San Diego Shipwreck Exhibit</strong></p>
+        </div>
+    </div>
+</section>
+
+		<section id="ayala-museum-detail" class="section section-museums-detail">
+    <h1>AYALA MUSEUM</h1>
+    <p>Ayala Museum is one of the premier cultural institutions in the Philippines, located in the heart of Makati. The museum showcases a rich collection of Filipino art, culture, and history, with exhibits ranging from pre-colonial artifacts to contemporary art. It is renowned for its well-curated galleries, including its famous Filipino Gold collection, which displays the country's ancient gold artifacts, and the Diwa ng Pasko (Spirit of Christmas) exhibit during the holidays.</p>
+
+    <p>The museum also features diverse exhibitions on Filipino heritage, traditional textiles, and sculptures, as well as rotating temporary exhibitions that highlight the work of local and international artists. The Ayala Museum is a key destination for those interested in exploring the cultural and historical legacy of the Philippines. It offers an immersive experience, through both permanent and temporary exhibitions, and provides educational programs and workshops that promote Filipino culture to a wider audience.</p>
+
+    <p>Also, the Ayala Museum is known for its commitment to preserving Filipino heritage through innovative and interactive displays, making it a must-visit for art lovers, history buffs, and anyone wanting to learn more about the Philippines.</p>
+
+    <div class="museum-images">
+        <div class="museum-image">
+            <img src="sandugo.jpg" alt="The Sandugo by Vicente Manansala">
+            <p><strong>"The Sandugo" by Vicente Manansala</strong></p>
+        </div>
+        <div class="museum-image">
+            <img src="surigao.jpg" alt="The Surigao Treasure">
+            <p><strong>The Surigao Treasure</strong></p>
+        </div>
+        <div class="museum-image">
+            <img src="necklace.jpg" alt="Gold Necklaces from Butuan">
+            <p><strong>Gold Necklaces from Butuan</strong></p>
+        </div>
+    </div>
+</section>
+
+	<section id="casa-manila-detail" class="section section-museums-detail">
+    <h1>CASA MANILA</h1>
+    <p>Casa Manila is a museum that offers a fascinating glimpse into the life and culture of the Philippines during the Spanish colonial period. Located in the historic district of Intramuros, Manila, the museum is housed in a meticulously restored 19th-century Spanish house. Casa Manila showcases the interior design, furniture, and artifacts that reflect the lifestyle of Filipino elites during the Spanish era.</p>
+
+    <p>The exhibits feature various rooms such as the Sala (living room), Comedor (dining room), and Dormitorio (bedroom), each showcasing period-appropriate furnishings, fine art, and everyday items that illustrate the fusion of Spanish and local Filipino influences. The museum also emphasizes the social and cultural dynamics of the time, including the role of the mestizo class, the influence of Catholicism, and the integration of Western European and indigenous Filipino traditions.</p>
+
+    <p>Casa Manila is not just a showcase of art and history; it also serves as a cultural resource that highlights the architectural and social evolution of Manila. The museum is a valuable stop for anyone interested in the colonial past of the Philippines, offering a rich and immersive experience into Filipino heritage.</p>
+
+    <div class="museum-images">
+        <div class="museum-image">
+            <img src="spanish.jpg" alt="Spanish Colonial Furniture">
+            <p><strong>Spanish Colonial Furniture</strong></p>
+        </div>
+        <div class="museum-image">
+            <img src="religious.jpg" alt="Religious Artworks and Icons">
+            <p><strong>Religious Artworks and Icons</strong></p>
+        </div>
+        <div class="museum-image">
+            <img src="items.jpg" alt="Period Household Items">
+            <p><strong>Period Household Items</strong></p>
+        </div>
+    </div>
+</section>
+
+	<section id="museo-de-intramuros-detail" class="section section-museums-detail">
+    <h1>MUSEO DE INTRAMUROS</h1>
+    <p>Museo de Intramuros is a museum located within the historical district of Intramuros, Manila, that explores the rich history of the Philippines during the Spanish colonial era. Situated in the heart of the walled city, the museum is housed in what was once the San Ignacio Church, an important landmark during the Spanish period. The museum's design and exhibits immerse visitors in the history and culture of the time, particularly focusing on the influence of Spanish colonization on Filipino art, religion, and society.</p>
+
+    <p>The museum’s collection includes religious artifacts, period furniture, maps, and replicas of important historical documents, offering a detailed view of colonial life. It also highlights the architectural and artistic heritage of the era, with displays showcasing the evolution of Catholicism in the Philippines and the impact of Spanish rule on local culture. The museum’s interactive exhibits provide insights into the roles of the Spanish, indigenous Filipinos, and missionaries in shaping the cultural landscape of the Philippines.</p>
+
+    <p>Museo de Intramuros also offers educational programs and exhibitions that highlight both the historical and contemporary significance of Intramuros, one of the country’s most significant cultural and historical zones. Visitors can learn about the area’s history, from its role in the Spanish colonial period to its reconstruction after the devastation of World War II.</p>
+
+    <div class="museum-images">
+        <div class="museum-image">
+            <img src="icons.jpg" alt="Religious Sculptures and Icons">
+            <p><strong>Religious Sculptures and Icons</strong></p>
+        </div>
+        <div class="museum-image">
+            <img src="paint.jpg" alt="Paintings and Religious Artworks">
+            <p><strong>Paintings and Religious Artworks</strong></p>
+        </div>
+        <div class="museum-image">
+            <img src="bell.jpg" alt="Church Bells">
+            <p><strong>Church Bells</strong></p>
+        </div>
+    </div>
+</section>
+
+	<section id="museo-pambata-detail" class="section section-museums-detail">
+    <h1>MUSEO PAMBATA</h1>
+    <p>Museo Pambata is an interactive children's museum located along Roxas Boulevard, Manila. It is dedicated to the education and enrichment of children through fun, hands-on exhibits that highlight Philippine history, culture, and natural heritage. Founded in 1994, the museum aims to engage young minds by providing an environment where learning is both educational and enjoyable.</p>
+
+    <p>The museum's exhibits are designed to encourage creativity and curiosity among children. Some notable exhibits include replicas of historical Filipino settings, like a traditional Filipino house, as well as interactive displays about Philippine biodiversity, Filipino values, and historical events. The museum also includes various themed areas, such as a mini-theater, a play area for younger children, and a section dedicated to science and technology.</p>
+
+    <p>Museo Pambata fosters a deeper understanding of Filipino culture while making learning engaging through its interactive approach. It also promotes educational programs, workshops, and special events aimed at developing children’s skills, values, and appreciation for the arts and sciences.</p>
+
+    <div class="museum-images">
+        <div class="museum-image">
+            <img src="hero.jpg" alt=""Philippine Heroes" Mural">
+            <p><strong>"Philippine Heroes" Mural</strong></p>
+        </div>
+        <div class="museum-image">
+            <img src="house.jpg" alt="Traditional Filipino House Replica">
+            <p><strong>Traditional Filipino House Replica</strong></p>
+        </div>
+        <div class="museum-image">
+            <img src="bio.jpg" alt="Biodiversity Exhibit">
+            <p><strong>Biodiversity Exhibit</strong></p>
+        </div>
+    </div>
+</section>
+
+
+	<section id="metropolitan-museum-detail" class="section section-museums-detail">
+    <h1>Metropolitan Museum of Manila</h1>
+    <p>The Metropolitan Museum of Manila (MET) is a premier art institution in the Philippines that showcases a rich blend of contemporary and traditional Filipino art while fostering an appreciation for international art. Located in Manila, the MET serves as a vital hub for cultural and artistic engagement. It features diverse exhibitions, from works by prominent Filipino artists to innovative contemporary creations, highlighting the country’s artistic heritage and dynamism.</p>
+
+    <p>The museum is also known for its permanent exhibits, such as pre-colonial gold artifacts, which preserve the cultural achievements of ancient Filipino societies. Through partnerships with international institutions, the MET hosts traveling exhibitions that connect local audiences to global art traditions, fostering a dialogue between cultures.</p>
+
+    <p>Additionally, the museum offers workshops, lectures, and public programs that nurture creativity and cultural awareness among visitors of all ages. True to its mission, the MET ensures that art is accessible to all, inspiring both enthusiasts and casual visitors alike.</p>
+
+    <div class="museum-images">
+        <div class="museum-image">
+            <img src="metal.jpg" alt="Metal Age pottery">
+            <p><strong>Metal Age pottery</strong></p>
+        </div>
+        <div class="museum-image">
+            <img src="famiy.jpg" alt="The Holy Family">
+            <p><strong>The Holy Family</strong></p>
+        </div>
+        <div class="museum-image">
+            <img src="things.jpg" alt="Luis Yee Jr's Things. 1980">
+            <p><strong>Luis Yee Jr's Things, 1980</strong></p>
+        </div>
+    </div>
+</section>
+
+	<section id="manila-clock-tower-museum-detail" class="section section-museums-detail">
+            <h1>Manila Clock Tower Museum</h1>
+            <p>The museum features engaging exhibits, including those showcasing the pivotal <span class="highlight">Battle of Manila</span> during World War II, with 3D installations and interactive displays. Alongside its historical elements, it also displays contemporary artworks by renowned Filipino artists like Rene Robles and Joe Datuin.</p>
+        <p>Restored with elegant white and gold accents, the clock tower itself is a symbol of resilience. Visitors can enjoy a <span class="highlight">360-degree panoramic view</span> of historic Manila landmarks such as Intramuros and Lawton, making the museum an exceptional destination for learning and leisure.</p>
+        <p>Open to the public since 2022, the Manila Clock Tower Museum stands as a testament to Manila's rich cultural heritage and architectural grandeur.</p>
+            <div class="museum-images">
+        <div class="museum-image">
+            <img src="ww2.jpg" alt="The Battle of Manila during World War II">
+            <p><strong>The Battle of Manila during World War II</strong></p>
+        </div>
+        <div class="museum-image">
+            <img src="banaag.jpg" alt="Banaag and Modern Manileña">
+            <p><strong>Banaag and Modern Manileña</strong></p>
+        </div>
+        <div class="museum-image">
+            <img src="old.jpg" alt="The Old Post Office">
+            <p><strong>The Old Post Office<strong></p>
+        </div>
+    </div>
+</section>
+
+
+
+    </main>
+	<!Tour Section>
+        <section id="tours" class="section section-tours">
+            <h2>Exclusive Museum Tours in Manila</h2>
+            <p>Join our guided tours and uncover hidden gems at each location.</p>
+
+	<!Tour 1>
+            <div class="tour">
+                <h3>National Museum of Fine Arts</h3>
+                <p><strong>Location:</strong> Padre Burgos Ave, Ermita, Manila, 1000 Metro Manila</p>
+                <p><strong>Visiting Schedule:</strong> Tuesdays - Sundays: 9:00 AM - 4:00 PM</p>
+		<p><strong>Admission:</strong> Admission is free. Walk-ins should be accepted</p>
+            </div>
+
+            <!Tour 2>
+            <div class="tour">
+                <h3>National Museum of Natural History</h3>
+                <p><strong>Location:</strong> Teodoro F. Valencia Cir, Ermita, Manila, 1000 Metro Manila</p>
+                <p><strong>Visiting Schedule:</strong> Tuesdays - Sundays: 9:00 AM - 4:00 PM</p>
+		<p><strong>Admission:</strong> Admission is free. Walk-ins should be accepted</p>
+            </div>
+
+            <!Tour 3>
+            <div class="tour">
+                <h3>National Museum of Anthropology</h3>
+                <p><strong>Location:</strong> HXPJ+3C6, P. Burgos Drive Rizal Park, Teodoro F. Valencia Cir, Ermita, Manila, 1000 Metro Manila</p>
+                <p><strong>Visiting Schedule:</strong> Tuesdays - Sundays: 9:00 AM - 4:00 PM</p>
+		<p><strong>Admission:</strong> Admission is free. Walk-ins should be accepted</p>
+            </div>
+	    <!Tour 4>
+            <div class="tour">
+                <h3>Ayala Museum</h3>
+                <p><strong>Location:</strong>  Makati Avenue, Greenbelt Park, Makati, Metro Manila</p>
+                <p><strong>Visiting Schedule:</strong> Monday - Saturday: 9:00 AM - 6:00 PM</p>
+		<p>Closed on Sundays</p>
+		<p><strong>Admission:</strong> The general admission is 425 pesos. Discounted rates for students, senior citizens, and persons with disabilities are available. Walk-ins are welcome, but reservations are recommended for groups.</p>
+            </div>
+	    <!Tour 5>
+            <div class="tour">
+                <h3>Casa Manila</h3>
+                <p><strong>Location:</strong> Plaza San Luis Complex, General Luna St., Intramuros, Manila, 1002 Metro Manila</p>
+                <p><strong>Visiting Schedule:</strong> Monday - Sunday: 9:00 AM - 6:00 PM</p>
+		<p><strong>Admission:</strong> The general admission is 75 pesos. Discounted rates available for students, senior citizens, and persons with disabilities. Walk-ins are welcome</p>
+            </div>
+ 	    <!Tour 6>
+            <div class="tour">
+                <h3>Museo de Intramuros</h3>
+                <p><strong>Location:</strong> Plaza Roma, Intramuros, Manila, 1002 Metro Manila</p>
+                <p><strong>Visiting Schedule:</strong> Tuesday - Sunday: 9:00 AM - 6:00 PM</p>
+		<p>Closed on Mondays</p>
+		<p><strong>Admission:</strong> The general admission is 100 pesos. Discounts available for students, senior citizens, and persons with disabilities. Walk-ins are welcome</p>
+            </div>
+	    <!Tour 7>
+            <div class="tour">
+                <h3>Museo Pambata</h3>
+                <p><strong>Location:</strong> Roxas Blvd, Ermita, Manila, 1000 Metro Manila</p>
+                <p><strong>Visiting Schedule:</strong> Tuesday - Saturday: 9:00 AM - 5:00 PM</p>
+		<p>Closed on Sundays and Mondays</p>
+		<p><strong>Admission:</strong> The general admission is 100 pesos. Discounted rates for children, students, senior citizens, and persons with disabilities. Walk-ins are welcome</p>
+            </div>
+
+            <!Tour 8>
+            <div class="tour">
+                <h3>Metropolitan Museum of Manila</h3>
+                <p><strong>Location:</strong> 30th St, Taguig, Metro Manila</p>
+                <p><strong>Visiting Schedule:</strong> Tuesdays - Fridays: 11:00 AM - 6:00 PM</p>
+		<p>Saturdays and Sundays: 10:00 AM - 6:00 PM</p>
+		<p><strong>Admission:</strong> Admission fee is 100 pesos. Walk-ins are welcome</p>
+            </div>
+	    
+            <!Tour 9>
+            <div class="tour">
+                <h3>Manila Clock Tower Museum</h3>
+                <p><strong>Location:</strong> Manila City Hall, Padre Burgos Ave, Ermita, Manila, 1000 Metro Manila</p>
+                <p><strong>Visiting Schedule:</strong> Tuesdays - Sundays: 10:00 AM - 3:00 PM</p>
+		<p><strong>Admission:</strong> Admission fee is 100 pesos. Walk-ins are welcome</p>
+            </div>
+        </section>
+
+
+        <!-- About Us Section -->
+        <section id="about" class="section section-about">
+            <h2>About Us</h2>
+           <p>Welcome to an unparalleled journey through Manila’s rich history, dynamic art scene, and cultural heritage, guided by a team of experts who are as passionate as they are knowledgeable. We are historians, cultural connoisseurs, and experienced tour guides, united by a shared mission: to bring the story of the Philippines to life through carefully curated museum tours. With a deep love for Manila’s vibrant past and evolving present, we invite you to explore its treasures in ways that are immersive, educational, and unforgettable. From the ancient artifacts at the "National Museum of Anthropology", which reveal the life and traditions of early Filipinos, to the biodiversity marvels at the "National Museum of Natural History", and the cutting-edge works of contemporary Filipino artists at the "Metropolitan Museum", our tours cater to every curiosity and interest, promising a meaningful connection to the heart of the Philippines.</p>  
+
+<p>We believe that museums are not merely collections of static objects but living stories waiting to be uncovered. These institutions are windows into the soul of a people, capturing the triumphs, struggles, and aspirations that have shaped generations. Our approach transforms museum visits into profound experiences. Each tour is meticulously designed, blending historical accuracy with engaging narratives, and tailored to offer a fresh perspective on the Philippines’ multifaceted history and culture. Our team of expert guides doesn’t just present facts they bring exhibits to life, sharing unique insights, lesser known stories, and connections that help you see beyond the displays, making every moment of your visit memorable and enriching.</p>  
+
+<p>Whether this is your first exploration of Manila or you’re a seasoned traveler seeking new dimensions, we are here to ensure your journey is tailored to your preferences and passions. Love art? Dive into the bold and colorful expressions of Filipino creativity, from traditional crafts to avant-garde masterpieces. Fascinated by history? Uncover the layers of Manila’s past, from ancient civilizations to its colonial influences and modern transformations. Curious about science and nature? Marvel at the stunning biodiversity of the Philippines, one of the world’s richest ecological treasures, and learn about its environmental significance. Whatever your interest, our personalized tours promise to offer not just knowledge but inspiration, ensuring every visitor finds something that resonates deeply.</p>  
+
+<p>Our tours go beyond mere sightseeing. We aim to immerse you in the essence of Filipino identity, connecting you to the stories that define its people. Imagine standing before ancient gold ornaments, discovering the craftsmanship and spirituality of pre-colonial Filipinos. Picture yourself amidst displays of rare flora and fauna, learning how the Philippines became a global biodiversity hotspot. Envision engaging with modern art pieces, each one a reflection of contemporary Filipino society and its vibrant cultural pulse. These moments are what we strive to create a profound connection that leaves a lasting impression.</p>  
+
+<p>When you join us, you’re not just visiting museums; you’re embarking on a transformative journey through time, culture, and creativity. Each step of your tour is designed to inspire curiosity, spark dialogue, and deepen your appreciation for the incredible legacy of the Philippines. Let us guide you through Manila’s most iconic museums and hidden gems, creating an experience that is as enlightening as it is enjoyable. Together, we’ll uncover the stories that have shaped this nation and celebrate the creativity and resilience of its people. "Come and discover the Philippines like never before with us, every visit is more than a tour; it’s a celebration of culture and history that you’ll carry with you forever."</p>  
+        </section>
+
+        <!-- Contact Us Section -->
+        <section id="contact" class="section section-contact">
+            <h2>Contact Us</h2>
+            <div class="container">
+                <h3>Contact Information:</h3>
+		<img src="arnado.jpg" alt="Contact Us" style="max-width: 12%; height: auto;">
+                <p>📞 Phone: +63 09078069541</p>
+                <p>📧 Email: <a href="robertlee.arnado@gmail.com">robertlee.arnado@gmail.com</a></p>
+                <p>📍 Address: 165 Main St, Manila, Philippines, 1740, Philippinnes</p>
+		<img src="sena.jpg" alt="Contact Us" style="max-width: 10%; height: auto;">
+                <p>📞 Phone: +63 09602958762</p>
+                <p>📧 Email: <a href="fsena4547@gmail.com@gmail.com">fsena4547@gmail.com@gmail.com</a></p>
+                <p>📍 Address: 165 Main St, Manila, Philippines, 1740, Philippinnes</p>
+                <h3>Follow Us:</h3>
+                <a href="#">Facebook</a> | <a href="#">Instagram</a> | <a href="#">Twitter</a>
+            </div>
+        </section>
+
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 Explore Manila Museums</p>
+    </footer>
+
+</body>
+</html>
